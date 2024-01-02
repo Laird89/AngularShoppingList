@@ -1,0 +1,45 @@
+.gridArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "imgArea listArea";
+  gap: 10px;
+}
+.common {
+  color: #40513B;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 30px;
+  background: #EDF1D6;
+  box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+  font-family: "Open Sans", sans-serif;
+}
+
+#image{
+  width: 15%;
+  /* height: 50%; */
+}
+
+.addItem {
+  grid-area: imgArea;
+  text-align: center;
+}
+
+.addItem button {
+  margin: 10px;
+}
+
+.listArea {
+  grid-area: listArea;
+}
+
+@media (max-width: 480px){
+  .gridArea {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "imgArea" "listArea";
+    gap: 10px;
+  }
+}

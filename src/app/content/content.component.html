@@ -1,0 +1,15 @@
+<section class="gridArea">
+  <div class="addItem common">
+    <h1>Add a Shopping Item</h1>
+    <img id="image" src="./assets/images/shoppingcart.png"><br>
+    <label><input type="text" [(ngModel)]="foodItem" ></label>
+    <button [disabled]="foodItem === ''" (click)="addToList()">Add to list</button>
+    <button (click)="clearList()">Remove All</button>
+  </div>
+  <div class="listArea common">
+    <h3>Shopping List:</h3>
+    <ul>
+      <li *ngFor="let item of foodItems">{{item}}</li>
+    </ul>
+  </div>
+</section>
